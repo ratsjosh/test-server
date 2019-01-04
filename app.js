@@ -39,6 +39,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-require('mongoose').connect('mongodb://localhost/tattletale');
+require('mongoose').connect(process.env.NODE_DB_URI);
 
 module.exports = app;
